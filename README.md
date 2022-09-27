@@ -14,7 +14,11 @@ CPUs and do not contain high performance GPUs.
 
 The below results are for performing inference on 30 seconds of audio.
 
-| Model | Inference |
-| --- | ----------- |
-| fp32 | 19.1 |
-| qint8 | 6.9 |
+| Whisper Model | Model Type | Linear Layer | Inference Time |
+| --- | --- | ----------- | --- |
+| tiny  | fp32 | nn.Linear | 2.3 |
+| tiny  | fp32 | Linear | 2.3 |
+| tiny  | qint8 | nn.Linear | 3.1 |
+| small | fp32 | nn.Linear | 19.1s |
+| small | fp32 | Linear | 19.5s |
+| small | qint8 | nn.Linear | 6.9s |
