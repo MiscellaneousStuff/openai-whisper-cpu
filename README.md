@@ -17,22 +17,24 @@ https://www.youtube.com/watch?v=oKOtzIo-uYw
 
 | Device | Whisper Model | Data Type | Linear Layer | Inference Time |
 | --- | --- | ----------- | --- | --- |
-| GPU | tiny | fp32 | Linear | ? |
+| GPU | tiny | fp32 | Linear | 0.5 |
 | CPU | tiny  | fp32 | nn.Linear | 2.3 |
-| CPU | tiny  | fp32 | Linear | 2.3 |
 | CPU | tiny  | qint8 (quant) | nn.Linear | 3.1 |
 
 | Device | Whisper Model | Data Type | Linear Layer | Inference Time |
-| --- | --- | ----------- | --- | --- 
-| GPU | small | fp32 | Linear | ? |
-| CPU | small | fp32 | nn.Linear | 19.1s |
-| CPU | small | fp32 | Linear | 19.5s |
-| CPU | small | qint8 (quant) | nn.Linear | 6.9s |
+| --- | --- | ----------- | --- | --- |
+| GPU | base | fp32 | Linear | 0.6 |
+| CPU | base  | fp32 | nn.Linear | 5.2 |
+| CPU | base  | qint8 (quant) | nn.Linear | 3.2 |
 
+| Device | Whisper Model | Data Type | Linear Layer | Inference Time |
+| --- | --- | ----------- | --- | --- 
+| GPU | small | fp32 | Linear | 0.7 |
+| CPU | small | fp32 | nn.Linear | 19.1s |
+| CPU | small | qint8 (quant) | nn.Linear | 6.9s |
 
 | Device | Whisper Model | Data Type | Linear Layer | Inference Time |
 | --- | --- | ----------- | --- | --- 
 | GPU | medium | fp32 | Linear | 1.7s |
 | CPU | medium | fp32 | nn.Linear | 60.7 |
-| CPU | medium | fp32 | Linear | ? |
 | CPU | medium | qint8 (quant) | nn.Linear | 23.1 |
