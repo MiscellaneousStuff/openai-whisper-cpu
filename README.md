@@ -24,11 +24,17 @@ https://www.youtube.com/watch?v=oKOtzIo-uYw
 | CPU | tiny  | fp32 | nn.Linear | 2.3 |
 | CPU | tiny  | qint8 (quant) | nn.Linear | 3.1 (0.74x slowdown) |
 
+Tiny quantized model is 9.67x faster than real time.
+Tiny quantized model is 0.74x slower than the original model.
+
 | Device | Whisper Model | Data Type | Linear Layer | Inference Time |
 | --- | --- | ----------- | --- | --- |
 | GPU | base | fp32 | Linear | 0.6 |
 | CPU | base  | fp32 | nn.Linear | 5.2 |
 | CPU | base  | qint8 (quant) | nn.Linear | 3.2 (1.62x speedup) |
+
+Base quantized model is 9.37x faster than real time.
+Base quantized model is 1.62x faster than the original model.
 
 | Device | Whisper Model | Data Type | Linear Layer | Inference Time |
 | --- | --- | ----------- | --- | --- |
@@ -36,8 +42,14 @@ https://www.youtube.com/watch?v=oKOtzIo-uYw
 | CPU | small | fp32 | nn.Linear | 19.1s |
 | CPU | small | qint8 (quant) | nn.Linear | 6.9s (2.76x speedup) |
 
+Small quantized model is 4.34x faster than real time.
+Small quantized model is 2.76x faster than the original model.
+
 | Device | Whisper Model | Data Type | Linear Layer | Inference Time |
 | --- | --- | ----------- | --- | --- 
 | GPU | medium | fp32 | Linear | 1.7s |
 | CPU | medium | fp32 | nn.Linear | 60.7 |
 | CPU | medium | qint8 (quant) | nn.Linear | 23.1 (2.62x speedup) |
+
+Medium quantized model is 1.29x faster than real time.
+Medium quantized model is 2.62x faster than the original model.
