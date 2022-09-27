@@ -13,6 +13,12 @@ CPUs and do not contain high performance GPUs.
 This could lead to allowing the larger Whisper models to faster
 on laptops without a GPU.
 
+Hardware for experiments:
+CPU - AMD Ryzen 5 5600X
+RAM - 32GB DDR4
+GPU - Nvidia GeForce RTX 3060 Ti
+HDD - M.2 SSD
+
 ## Results
 
 Test audio is the first 30 seconds of: \
