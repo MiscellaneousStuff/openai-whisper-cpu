@@ -26,5 +26,23 @@ https://pytorch.org/assets/images/quantization-practice/quantization-flowchart2.
 
 import whisper
 
+test_path  = "C:\\Users\\win8t\\Music\\"
+test_path += "Fugees - Killing Me Softly With His Song (Official Video).mp3"
+
 if __name__ == "__main__":
     model = whisper.load_model("tiny")
+
+    """
+    audio = whisper.load_audio(test_path)
+    audio = whisper.pad_or_trim(audio)
+
+    mel   = whisper.log_mel_spectrogram(audio).to(model.device)
+
+    _, probs = model.detect_language(mel)
+    print(f"Detected language: {max(probs, key=probs.get)}")
+
+    options = whisper.DecodingOptions()
+    result = whisper.decode(model, mel, options)
+
+    print(result.text)
+    """

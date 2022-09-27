@@ -15,13 +15,24 @@ CPUs and do not contain high performance GPUs.
 Test audio is the first 30 seconds of: \
 https://www.youtube.com/watch?v=oKOtzIo-uYw
 
-The below results are for performing inference on 30 seconds of audio.
+| Device | Whisper Model | Data Type | Linear Layer | Inference Time |
+| --- | --- | ----------- | --- | --- |
+| GPU | tiny | fp32 | Linear | ? |
+| CPU | tiny  | fp32 | nn.Linear | 2.3 |
+| CPU | tiny  | fp32 | Linear | 2.3 |
+| CPU | tiny  | qint8 (quant) | nn.Linear | 3.1 |
 
-| Whisper Model | Model Type | Linear Layer | Inference Time |
-| --- | --- | ----------- | --- |
-| tiny  | fp32 | nn.Linear | 2.3 |
-| tiny  | fp32 | Linear | 2.3 |
-| tiny  | qint8 | nn.Linear | 3.1 |
-| small | fp32 | nn.Linear | 19.1s |
-| small | fp32 | Linear | 19.5s |
-| small | qint8 | nn.Linear | 6.9s |
+| Device | Whisper Model | Data Type | Linear Layer | Inference Time |
+| --- | --- | ----------- | --- | --- 
+| GPU | small | fp32 | Linear | ? |
+| CPU | small | fp32 | nn.Linear | 19.1s |
+| CPU | small | fp32 | Linear | 19.5s |
+| CPU | small | qint8 (quant) | nn.Linear | 6.9s |
+
+
+| Device | Whisper Model | Data Type | Linear Layer | Inference Time |
+| --- | --- | ----------- | --- | --- 
+| GPU | medium | fp32 | Linear | 1.7s |
+| CPU | medium | fp32 | nn.Linear | 60.7 |
+| CPU | medium | fp32 | Linear | ? |
+| CPU | medium | qint8 (quant) | nn.Linear | 23.1 |
