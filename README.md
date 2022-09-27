@@ -12,6 +12,9 @@ CPUs and do not contain high performance GPUs.
 
 ## Results
 
+Test audio is the first 30 seconds of: \
+https://www.youtube.com/watch?v=oKOtzIo-uYw
+
 The below results are for performing inference on 30 seconds of audio.
 
 | Whisper Model | Model Type | Linear Layer | Inference Time |
