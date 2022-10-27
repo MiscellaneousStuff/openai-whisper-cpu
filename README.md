@@ -15,7 +15,7 @@ on laptops without a GPU. However, be aware that there could be
 a reduction in transcription accuracy, especially for the smaller
 model sizes.
 
-Hardware for experiments:
+Hardware for experiments: \
 CPU - AMD Ryzen 5 5600X \
 RAM - 32GB DDR4 \
 GPU - Nvidia GeForce RTX 3060 Ti \
