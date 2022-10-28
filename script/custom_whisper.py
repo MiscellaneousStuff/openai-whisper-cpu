@@ -76,14 +76,14 @@ def time_model_evaluation(model,audio_file):
         write_srt(result["segments"], file=srt)
     # save JSON
     json_object = json.dumps(result, indent=4)
-    with open(Path("./script") / (audio_basename + ".json"), "w", encoding="utf-8") as json:
-        json.write(json_object)
+    with open(Path("./script") / (audio_basename + ".json"), "w", encoding="utf-8") as output:
+        output.write(json_object)
 
     print("Evaluate total time (seconds): {0:.1f}".format(eval_duration_time))
 
 
 # check if audio_path is a dir or a file
-if os.path.exists(os.path.dirname(audio_path)):
+if os.path.isdir(audio_path):
     # is dir
     files = [f for f in os.listdir(audio_path) if os.path.isfile(os.path.join(audio_path, f))]
     for audio_file in files:
