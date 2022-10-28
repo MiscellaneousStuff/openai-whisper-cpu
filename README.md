@@ -11,9 +11,7 @@ run this model out-of-the-box as most consumer computers only contain
 CPUs and do not contain high performance GPUs.
 
 This could lead to allowing the larger Whisper models run faster
-on laptops without a GPU. However, be aware that there could be
-a reduction in transcription accuracy, especially for the smaller
-model sizes.
+on laptops without a GPU.
 
 Hardware for experiments: \
 CPU - AMD Ryzen 5 5600X \
