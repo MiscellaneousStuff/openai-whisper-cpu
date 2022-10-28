@@ -11,9 +11,7 @@ run this model out-of-the-box as most consumer computers only contain
 CPUs and do not contain high performance GPUs.
 
 This could lead to allowing the larger Whisper models run faster
-on laptops without a GPU. However, be aware that there could be
-a reduction in transcription accuracy, especially for the smaller
-model sizes.
+on laptops without a GPU.
 
 Hardware for experiments: \
 CPU - AMD Ryzen 5 5600X \
@@ -99,7 +97,19 @@ Medium quantized model is 2.62x faster than the original model.
 
 # Docker
 
-Build the docker image.
-``` docker build -t whisper-cpu . ```
-Run the quantized model.
-```nohup docker run --rm -v "$(pwd)/audio":/usr/src/app/audio -v "$(pwd)/script":/usr/src/app/script whisper-cpu python3 ./script/custom_whisper.py audio/path_to_dir_or_audio_file --language English --model medium.en &```
+Build the docker image.   
+
+``` 
+docker build -t whisper-cpu . 
+```
+Run the quantized model.   
+
+```
+docker run --rm -v "$(pwd)/audio":/usr/src/app/audio -v "$(pwd)/script":/usr/src/app/script whisper-cpu python3 ./script/custom_whisper.py audio/path_to_dir_or_audio_file --language English --model medium.en 
+```
+
+- ```-v "$(pwd)/audio":/usr/src/app/audio``` this creates a volume to give docker access to your audio files.
+- ```-v "$(pwd)/script":/usr/src/app/script``` this volume gives docker access to the custom start script. Transcription results are also stored here.
+
+- Note: you migth want to adjust ```./script/custom_whisper.py``` for your own needs.
+
