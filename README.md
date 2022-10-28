@@ -96,3 +96,10 @@ Small quantized model is 2.76x faster than the original model.
 
 Medium quantized model is 1.29x faster than real time. \
 Medium quantized model is 2.62x faster than the original model.
+
+# Docker
+
+Build the docker image.
+``` docker build -t whisper-cpu . ```
+Run the quantized model.
+```nohup docker run --rm -v "$(pwd)/audio":/usr/src/app/audio -v "$(pwd)/script":/usr/src/app/script whisper-cpu python3 ./script/custom_whisper.py audio/path_to_dir_or_audio_file --language English --model medium.en &```
