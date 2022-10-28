@@ -99,7 +99,19 @@ Medium quantized model is 2.62x faster than the original model.
 
 # Docker
 
-Build the docker image.
-``` docker build -t whisper-cpu . ```
-Run the quantized model.
-```nohup docker run --rm -v "$(pwd)/audio":/usr/src/app/audio -v "$(pwd)/script":/usr/src/app/script whisper-cpu python3 ./script/custom_whisper.py audio/path_to_dir_or_audio_file --language English --model medium.en &```
+Build the docker image.   
+
+``` 
+docker build -t whisper-cpu . 
+```
+Run the quantized model.   
+
+```
+docker run --rm -v "$(pwd)/audio":/usr/src/app/audio -v "$(pwd)/script":/usr/src/app/script whisper-cpu python3 ./script/custom_whisper.py audio/path_to_dir_or_audio_file --language English --model medium.en 
+```
+
+- ```-v "$(pwd)/audio":/usr/src/app/audio``` this creates a volume to give docker access to your audio files.
+- ```-v "$(pwd)/script":/usr/src/app/script``` this volume gives docker access to the custom start script. Transcription results are also stored here.
+
+- Note: you migth want to adjust ```./script/custom_whisper.py``` for your own needs.
+
