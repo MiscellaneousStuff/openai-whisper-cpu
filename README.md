@@ -10,7 +10,7 @@ on the cloud for high quality transcription, many end users can not
 run this model out-of-the-box as most consumer computers only contain
 CPUs and do not contain high performance GPUs.
 
-This could lead to allowing the larger Whisper models run faster
+This could lead to allowing the larger Whisper models to run faster
 on laptops without a GPU.
 
 Hardware for experiments: \
@@ -111,5 +111,5 @@ docker run --rm -v "$(pwd)/audio":/usr/src/app/audio -v "$(pwd)/script":/usr/src
 - ```-v "$(pwd)/audio":/usr/src/app/audio``` this creates a volume to give docker access to your audio files.
 - ```-v "$(pwd)/script":/usr/src/app/script``` this volume gives docker access to the custom start script. Transcription results are also stored here.
 
-- Note: you migth want to adjust ```./script/custom_whisper.py``` for your own needs.
+- Note: you might want to adjust ```./script/custom_whisper.py``` for your own needs.
 
